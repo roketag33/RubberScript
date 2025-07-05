@@ -2,11 +2,37 @@
 
 Collection de scripts Rubber Ducky pour tests d'intrusion et démonstrations de sécurité.
 
+**Évolution du Projet :**
+- 🎵 **Scripts Originaux :** RickRoll classique (simple et planifié)
+- 🎯 **Scripts Avancés :** 8 nouveaux scripts créatifs et éducatifs
+- 🛡️ **Sécurité Renforcée :** Failsafes et nettoyage automatique
+- 🎓 **Objectif Pédagogique :** Démonstration des risques de sécurité physique
+
 ## ⚠️ Avertissement
 
 Ces scripts sont conçus pour des **tests d'intrusion autorisés** et des **démonstrations de sécurité**. Utilisez-les uniquement sur des systèmes dont vous êtes propriétaire ou pour lesquels vous avez une autorisation explicite.
 
 ## 🎯 Scripts Disponibles
+
+### 0. 🎵 RickRoll (Scripts Originaux)
+**Localisation :** `RickRoll/`
+
+Scripts classiques de RickRoll pour ouvrir la célèbre vidéo YouTube.
+
+**Version Simple :**
+- **Windows :** `simple/windows_rickroll.txt` (GUI + Run)
+- **Linux :** `simple/linux_rickroll.txt` (ALT+F2 + xdg-open)
+
+**Version Planifiée :**
+- **Windows :** `plannified/windows_rickroll_sched.txt` (Tâche planifiée)
+- **Linux :** `plannified/linux_rickroll_sched.txt` (Cron job)
+
+**Durée :** Instantané (simple) / Planifié (différé)
+**URL :** https://www.youtube.com/watch?v=dQw4w9WgXcQ
+**Fonctionnalités :** 
+- Version simple : Exécution immédiate
+- Version planifiée : Tâche différée avec configuration (heure, fréquence)
+- Scripts modulaires avec section configuration personnalisable
 
 ### 1. 🎹 Clavier Schizophrène
 **Localisation :** `ClavierSchizophrene/`
@@ -144,6 +170,7 @@ Chaque script contient une section `CONFIGURATION` avec :
 
 | Script | Windows | Linux | macOS |
 |--------|---------|--------|--------|
+| RickRoll | ✅ | ✅ | ❌ |
 | Clavier Schizophrène | ✅ | ✅ | ✅ |
 | TTS Fantôme | ✅ | ✅ | ✅ |
 | Tapis Roulant | ✅ | ✅ | ⚠️ |
@@ -165,10 +192,29 @@ Ces scripts démontrent :
 - Les **risques des ports USB**
 - Les **techniques d'ingénierie sociale**
 - Les **bonnes pratiques de sécurité**
+- Les **attaques classiques** (RickRoll) vs **attaques créatives** (nouveaux scripts)
 
 ## 📄 Licence
 
 Ces scripts sont fournis à des fins éducatives et de test de sécurité uniquement. L'utilisateur est responsable de l'utilisation appropriée et légale de ces outils.
+
+## 📈 Historique du Projet
+
+### Phase 1 - Scripts Originaux (RickRoll)
+- **RickRoll Simple :** Ouverture directe de la vidéo YouTube
+- **RickRoll Planifié :** Tâche différée avec configuration personnalisable
+- **Compatibilité :** Windows et Linux
+
+### Phase 2 - Scripts Avancés (8 nouveaux)
+- **Développement créatif :** 8 scripts originaux avec effets visuels/audio
+- **Sécurité renforcée :** Failsafes et nettoyage automatique
+- **Multi-plateforme :** Support étendu Windows, Linux, macOS
+- **Qualité de code :** Principes DRY, SOLID, KISS, YAGNI
+
+### Phase 3 - Documentation Complète
+- **README détaillé :** Instructions d'utilisation et compatibilité
+- **Organisation claire :** Structure de dossiers par catégorie
+- **Objectifs pédagogiques :** Focus sur la sensibilisation sécurité
 
 ## 🤝 Contribution
 
@@ -177,7 +223,8 @@ Les contributions sont les bienvenues ! Respectez les principes DRY et SOLID lor
 ---
 
 **Auteur :** RubberScript Team  
-**Version :** 1.0  
-**Date :** 2025
+**Version :** 1.1  
+**Date :** 2025  
+**Scripts Totaux :** 9 catégories (+ RickRoll original)
 
 *"La sécurité est un processus, pas un produit" - Bruce Schneier* 
