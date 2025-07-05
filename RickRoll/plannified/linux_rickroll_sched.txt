@@ -1,0 +1,70 @@
+REM =====================================
+REM RickRoll Planifié - Script Modifiable Linux
+REM =====================================
+
+REM ---- CONFIGURATION (À MODIFIER ICI) ----
+REM Nom de la tâche cron (pour identification)
+REM TASK_NAME=RickRollDaily
+
+REM Heure d'exécution (format HH:MM)
+REM SCHEDULE_TIME=18:33
+
+REM URL de la vidéo
+REM VIDEO_URL=https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+REM Fréquence cron (quotidien = * * *, hebdomadaire = * * 1, etc.)
+REM FREQUENCY=* * *
+
+REM Délais d'attente (en millisecondes)
+REM DELAY_STANDARD=300
+REM DELAY_TERMINAL=700
+REM DELAY_COMMAND=500
+REM ----------------------------------------
+
+DEFAULT_DELAY 100
+DELAY 500
+
+REM ========== SECTION 1 : OUVERTURE TERMINAL ==========
+REM Ouvre le lanceur d'applications
+ALT F2
+DELAY 300
+
+REM Lance le terminal
+STRING gnome-terminal
+ENTER
+DELAY 700
+
+REM ========== SECTION 2 : CRÉATION TÂCHE CRON ==========
+REM Crée une tâche cron avec les paramètres configurés
+REM Format : MM HH * * * commande
+STRING echo "33 18 * * * xdg-open https://www.youtube.com/watch?v=dQw4w9WgXcQ" | crontab -
+ENTER
+DELAY 500
+
+REM ========== SECTION 3 : NETTOYAGE ==========
+REM Ferme le terminal
+CTRL SHIFT q
+
+REM ========== SECTION 4 : SUPPRESSION TÂCHE ==========
+REM Décommentez cette section pour supprimer toutes les tâches cron
+REM ALT F2
+REM DELAY 300
+REM STRING gnome-terminal
+REM ENTER
+REM DELAY 700
+REM STRING crontab -r
+REM ENTER
+REM DELAY 500
+REM CTRL SHIFT q
+
+REM ========== NOTES DE PERSONNALISATION ==========
+REM Pour modifier ce script :
+REM 1. Changez les valeurs dans la section CONFIGURATION
+REM 2. Format cron : MM HH JJ mois jour_semaine (* = tous)
+REM 3. Exemples fréquence :
+REM    - Quotidien : * * *
+REM    - Lundi seulement : * * 1
+REM    - Premier du mois : 1 * *
+REM 4. Pour autre URL : remplacez l'URL YouTube
+REM 5. Pour ajuster délais : modifiez les valeurs DELAY
+REM 6. Terminal alternatif : remplacez gnome-terminal par xterm, konsole, etc. 

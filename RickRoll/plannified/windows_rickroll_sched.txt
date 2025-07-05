@@ -1,0 +1,51 @@
+REM =====================================
+REM RickRoll Planifié - Script Modifiable
+REM =====================================
+
+REM ---- CONFIGURATION (À MODIFIER ICI) ----
+REM Nom de la tâche planifiée
+REM TASK_NAME=RickRollDaily
+
+REM Heure d'exécution (format HH:MM)
+REM SCHEDULE_TIME=18:33
+
+REM URL de la vidéo
+REM VIDEO_URL=https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+REM Fréquence (DAILY, WEEKLY, MONTHLY, ONCE)
+REM FREQUENCY=once
+
+REM Délais d'attente (en millisecondes)
+REM DELAY_STANDARD=300
+REM DELAY_UAC=1200
+REM DELAY_COMMAND=500
+REM ----------------------------------------
+
+DELAY 1000
+
+REM ========== SECTION 1 : OUVERTURE POWERSHELL ==========
+REM Ouvre la boîte "Exécuter"
+GUI r
+DELAY 300
+
+REM Lance PowerShell en administrateur
+STRING powershell
+CTRL-SHIFT ENTER
+DELAY 1200
+
+REM ========== SECTION 2 : VALIDATION UAC ==========
+REM Valide l'UAC (EN : ALT Y | FR : ALT O)
+ALT y
+DELAY 800
+
+REM ========== SECTION 3 : CRÉATION TÂCHE PLANIFIÉE ==========
+REM Crée/met à jour la tâche avec les paramètres configurés
+STRING schtasks /Create /SC DAILY /TN RickRollDaily /TR "powershell -WindowStyle Hidden -Command start https://www.youtube.com/watch?v=dQw4w9WgXcQ" /ST 18:30 /RL HIGHEST /F
+ENTER
+DELAY 500
+
+REM ========== SECTION 4 : NETTOYAGE ==========
+REM Ferme la console PowerShell
+STRING exit
+ENTER
+
