@@ -31,6 +31,11 @@ DELAY 300
 REM Lance PowerShell en administrateur
 STRING powershell
 CTRL-SHIFT ENTER
+DELAY 500
+
+REM Confirme l'ouverture de PowerShell (popup par défaut = Non)
+LEFT
+ENTER
 DELAY 1200
 
 REM ========== SECTION 2 : VALIDATION UAC ==========
