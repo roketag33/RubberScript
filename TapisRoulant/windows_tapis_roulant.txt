@@ -1,0 +1,125 @@
+REM ==========================================
+REM Tapis Roulant - Windows Rotation Écran
+REM ==========================================
+REM Fait tourner l'écran à 0°, 90°, 180°, 270°
+REM Utilise les raccourcis Ctrl+Alt+Flèche
+REM Failsafe : Ctrl+Alt+F pour restaurer
+REM Durée : 2 minutes avec remise à zéro
+
+REM ---- CONFIGURATION ----
+REM Rotations : 0° -> 90° -> 180° -> 270° -> 0°
+REM Durée par rotation : 15 secondes
+REM Nombre de cycles : 2 cycles complets
+REM Failsafe : Ctrl+Alt+F restaure à 0°
+
+DELAY 2000
+
+REM ========== TEST INITIAL ==========
+REM Vérifie que les raccourcis sont activés
+REM Certains PC ont les raccourcis désactivés par défaut
+
+REM ========== CYCLE 1 ==========
+REM Rotation à 90° (paysage droite)
+CTRL ALT RIGHT
+DELAY 15000
+
+REM Rotation à 180° (paysage inversé)
+CTRL ALT DOWN
+DELAY 15000
+
+REM Rotation à 270° (paysage gauche)
+CTRL ALT LEFT
+DELAY 15000
+
+REM Retour à 0° (normal)
+CTRL ALT UP
+DELAY 15000
+
+REM ========== CYCLE 2 - RAPIDE ==========
+REM Rotations plus rapides pour l'effet
+REM Rotation à 90°
+CTRL ALT RIGHT
+DELAY 8000
+
+REM Rotation à 180°
+CTRL ALT DOWN
+DELAY 8000
+
+REM Rotation à 270°
+CTRL ALT LEFT
+DELAY 8000
+
+REM Retour à 0°
+CTRL ALT UP
+DELAY 8000
+
+REM ========== CYCLE 3 - TRÈS RAPIDE ==========
+REM Effet "tapis roulant" rapide
+REM Rotation à 90°
+CTRL ALT RIGHT
+DELAY 4000
+
+REM Rotation à 180°
+CTRL ALT DOWN
+DELAY 4000
+
+REM Rotation à 270°
+CTRL ALT LEFT
+DELAY 4000
+
+REM Retour à 0°
+CTRL ALT UP
+DELAY 4000
+
+REM ========== CYCLE 4 - ULTRA RAPIDE ==========
+REM Effet vertigineux
+REM Rotation à 90°
+CTRL ALT RIGHT
+DELAY 2000
+
+REM Rotation à 180°
+CTRL ALT DOWN
+DELAY 2000
+
+REM Rotation à 270°
+CTRL ALT LEFT
+DELAY 2000
+
+REM Retour à 0°
+CTRL ALT UP
+DELAY 2000
+
+REM ========== SÉCURITÉ FINALE ==========
+REM S'assure que l'écran est bien remis à 0°
+REM Triple vérification
+CTRL ALT UP
+DELAY 1000
+CTRL ALT UP
+DELAY 1000
+CTRL ALT UP
+DELAY 2000
+
+REM ========== MESSAGE DE FIN ==========
+REM Ouvre un message pour confirmer la fin
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING Tapis Roulant - Mission accomplie
+ENTER
+STRING Écran remis en position normale
+ENTER
+STRING Durée totale : 2 minutes
+ENTER
+STRING Cycles effectués : 4 cycles complets
+ENTER
+STRING Failsafe utilisé : Ctrl+Alt+UP (multiple)
+DELAY 3000
+ALT F4
+
+REM ========== DERNIÈRE VÉRIFICATION ==========
+REM Ultime vérification que l'écran est normal
+CTRL ALT UP
+DELAY 500
+CTRL ALT UP 

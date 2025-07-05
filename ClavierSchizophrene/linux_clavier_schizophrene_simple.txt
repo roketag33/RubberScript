@@ -1,0 +1,116 @@
+REM ========================================
+REM Clavier Schizophrène - Linux Simple
+REM ========================================
+REM Fait clignoter les LED du clavier de manière aléatoire
+REM Durée : 60 secondes avec variations de timing
+REM Compatible avec la plupart des distributions Linux
+
+REM ---- CONFIGURATION ----
+REM Durée totale : 60 secondes
+REM Délai base : 200ms
+REM Variations : 100-500ms
+
+DELAY 1000
+
+REM ========== DÉBUT DU SPECTACLE ==========
+REM Cycle 1 : Caps Lock ON
+CAPSLOCK
+DELAY 200
+
+REM Cycle 2 : Num Lock ON
+NUMLOCK
+DELAY 350
+
+REM Cycle 3 : Scroll Lock ON
+SCROLLLOCK
+DELAY 150
+
+REM Cycle 4 : Caps Lock OFF
+CAPSLOCK
+DELAY 400
+
+REM Cycle 5 : Num Lock OFF
+NUMLOCK
+DELAY 250
+
+REM Cycle 6 : Scroll Lock OFF
+SCROLLLOCK
+DELAY 300
+
+REM Cycle 7 : Tout ON
+CAPSLOCK
+DELAY 100
+NUMLOCK
+DELAY 100
+SCROLLLOCK
+DELAY 500
+
+REM Cycle 8 : Tout OFF
+CAPSLOCK
+DELAY 100
+NUMLOCK
+DELAY 100
+SCROLLLOCK
+DELAY 400
+
+REM ========== PHASE RAPIDE ==========
+REM Clignotement rapide des 3 LED
+REPEAT 10
+    CAPSLOCK
+    DELAY 150
+    NUMLOCK
+    DELAY 150
+    SCROLLLOCK
+    DELAY 150
+    CAPSLOCK
+    DELAY 150
+    NUMLOCK
+    DELAY 150
+    SCROLLLOCK
+    DELAY 150
+END_REPEAT
+
+REM ========== PHASE LENTE ==========
+REM Clignotement lent et hypnotique
+REPEAT 5
+    CAPSLOCK
+    DELAY 800
+    CAPSLOCK
+    DELAY 800
+    NUMLOCK
+    DELAY 800
+    NUMLOCK
+    DELAY 800
+    SCROLLLOCK
+    DELAY 800
+    SCROLLLOCK
+    DELAY 800
+END_REPEAT
+
+REM ========== NETTOYAGE ==========
+REM Remet tout en état normal
+CAPSLOCK
+DELAY 100
+NUMLOCK
+DELAY 100
+SCROLLLOCK
+DELAY 100
+
+REM Deuxième passage pour être sûr
+CAPSLOCK
+DELAY 100
+NUMLOCK
+DELAY 100
+SCROLLLOCK
+DELAY 100
+
+REM Message de fin via terminal
+ALT F2
+DELAY 300
+STRING gnome-terminal
+ENTER
+DELAY 1000
+STRING echo "Le clavier a retrouvé sa raison... pour le moment."
+ENTER
+DELAY 2000
+ALT F4 

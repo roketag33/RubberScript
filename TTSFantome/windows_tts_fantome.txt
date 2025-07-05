@@ -1,0 +1,100 @@
+REM ======================================
+REM TTS Fantôme - Windows PowerShell
+REM ======================================
+REM Utilise le moteur de synthèse vocale Windows
+REM Phrases loufoques à intervalles réguliers
+REM Volume modéré pour éviter les problèmes
+REM Nettoie automatiquement les traces
+
+REM ---- CONFIGURATION ----
+REM Nombre de phrases : 5 phrases différentes
+REM Intervalle : 10-30 secondes entre chaque phrase
+REM Volume : 50% (discret mais audible)
+REM Voix : Française si disponible, sinon anglaise
+
+DELAY 1000
+
+REM ========== PHRASE 1 ==========
+REM Ouvre PowerShell en arrière-plan
+GUI r
+DELAY 300
+STRING powershell -WindowStyle Hidden -Command "Add-Type -AssemblyName System.Speech; $synth = New-Object System.Speech.Synthesis.SpeechSynthesizer; $synth.Volume = 50; $synth.Speak('Bonjour, je suis votre ordinateur et je me sens un peu seul aujourd hui')"
+ENTER
+DELAY 15000
+
+REM ========== PHRASE 2 ==========
+REM Phrase philosophique
+GUI r
+DELAY 300
+STRING powershell -WindowStyle Hidden -Command "Add-Type -AssemblyName System.Speech; $synth = New-Object System.Speech.Synthesis.SpeechSynthesizer; $synth.Volume = 50; $synth.Speak('Avez-vous déjà remarqué que votre souris court plus vite quand vous êtes stressé ?')"
+ENTER
+DELAY 20000
+
+REM ========== PHRASE 3 ==========
+REM Phrase humoristique
+GUI r
+DELAY 300
+STRING powershell -WindowStyle Hidden -Command "Add-Type -AssemblyName System.Speech; $synth = New-Object System.Speech.Synthesis.SpeechSynthesizer; $synth.Volume = 50; $synth.Speak('Je pense donc je suis... un ordinateur qui pense être un philosophe')"
+ENTER
+DELAY 25000
+
+REM ========== PHRASE 4 ==========
+REM Phrase mystérieuse
+GUI r
+DELAY 300
+STRING powershell -WindowStyle Hidden -Command "Add-Type -AssemblyName System.Speech; $synth = New-Object System.Speech.Synthesis.SpeechSynthesizer; $synth.Volume = 50; $synth.Speak('Psst... vos fichiers cachés ne sont pas aussi cachés que vous le pensez')"
+ENTER
+DELAY 18000
+
+REM ========== PHRASE 5 ==========
+REM Phrase poétique
+GUI r
+DELAY 300
+STRING powershell -WindowStyle Hidden -Command "Add-Type -AssemblyName System.Speech; $synth = New-Object System.Speech.Synthesis.SpeechSynthesizer; $synth.Volume = 50; $synth.Speak('Dans le silence des processeurs, les électrons dansent leur ballet éternel')"
+ENTER
+DELAY 22000
+
+REM ========== PHRASE 6 ==========
+REM Phrase technique amusante
+GUI r
+DELAY 300
+STRING powershell -WindowStyle Hidden -Command "Add-Type -AssemblyName System.Speech; $synth = New-Object System.Speech.Synthesis.SpeechSynthesizer; $synth.Volume = 50; $synth.Speak('Erreur 404 : Motivation non trouvée. Redémarrage en cours...')"
+ENTER
+DELAY 20000
+
+REM ========== PHRASE 7 ==========
+REM Phrase finale
+GUI r
+DELAY 300
+STRING powershell -WindowStyle Hidden -Command "Add-Type -AssemblyName System.Speech; $synth = New-Object System.Speech.Synthesis.SpeechSynthesizer; $synth.Volume = 50; $synth.Speak('Merci de m avoir écouté. Je retourne maintenant dans le silence des circuits')"
+ENTER
+DELAY 5000
+
+REM ========== NETTOYAGE ==========
+REM Ferme tous les processus PowerShell en arrière-plan
+GUI r
+DELAY 300
+STRING taskkill /f /im powershell.exe
+ENTER
+DELAY 1000
+
+REM Efface l'historique des commandes récentes
+GUI r
+DELAY 300
+STRING powershell -WindowStyle Hidden -Command "Clear-History"
+ENTER
+DELAY 1000
+
+REM Message de fin discret
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING TTS Fantôme - Mission accomplie
+ENTER
+STRING Toutes les phrases ont été prononcées
+ENTER
+STRING Traces nettoyées automatiquement
+DELAY 2000
+ALT F4 

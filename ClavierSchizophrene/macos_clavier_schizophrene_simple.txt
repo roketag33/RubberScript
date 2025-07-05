@@ -1,0 +1,99 @@
+REM ========================================
+REM Clavier Schizophrène - macOS Simple
+REM ========================================
+REM Fait clignoter la LED Caps Lock (seule LED disponible sur Mac)
+REM Durée : 60 secondes avec variations de timing
+REM Compatible macOS 10.12+
+
+REM ---- CONFIGURATION ----
+REM Durée totale : 60 secondes
+REM Délai base : 200ms
+REM Variations : 100-800ms (plus long car une seule LED)
+
+DELAY 1000
+
+REM ========== DÉBUT DU SPECTACLE ==========
+REM Clignotement lent pour commencer
+REPEAT 8
+    CAPSLOCK
+    DELAY 500
+    CAPSLOCK
+    DELAY 500
+END_REPEAT
+
+REM ========== PHASE RAPIDE ==========
+REM Clignotement rapide hypnotique
+REPEAT 20
+    CAPSLOCK
+    DELAY 150
+    CAPSLOCK
+    DELAY 150
+END_REPEAT
+
+REM ========== PHASE MORSE ==========
+REM Simulation du code Morse SOS
+REM S = 3 courts (...)
+REPEAT 3
+    CAPSLOCK
+    DELAY 100
+    CAPSLOCK
+    DELAY 200
+END_REPEAT
+
+DELAY 400
+
+REM O = 3 longs (---)
+REPEAT 3
+    CAPSLOCK
+    DELAY 100
+    CAPSLOCK
+    DELAY 600
+END_REPEAT
+
+DELAY 400
+
+REM S = 3 courts (...)
+REPEAT 3
+    CAPSLOCK
+    DELAY 100
+    CAPSLOCK
+    DELAY 200
+END_REPEAT
+
+DELAY 1000
+
+REM ========== PHASE ULTRA RAPIDE ==========
+REM Clignotement très rapide
+REPEAT 30
+    CAPSLOCK
+    DELAY 100
+    CAPSLOCK
+    DELAY 100
+END_REPEAT
+
+REM ========== PHASE LENTE FINALE ==========
+REM Clignotement lent pour finir
+REPEAT 10
+    CAPSLOCK
+    DELAY 800
+    CAPSLOCK
+    DELAY 800
+END_REPEAT
+
+REM ========== NETTOYAGE ==========
+REM S'assure que Caps Lock est éteint
+CAPSLOCK
+DELAY 100
+CAPSLOCK
+DELAY 100
+
+REM Message de fin via Terminal
+CMD SPACE
+DELAY 300
+STRING Terminal
+ENTER
+DELAY 1000
+STRING echo "Le clavier a retrouvé sa raison... pour le moment."
+ENTER
+DELAY 2000
+CMD q 

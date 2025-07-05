@@ -1,0 +1,255 @@
+REM ===========================================
+REM Pop-Up Shakespeare - macOS TextEdit
+REM ===========================================
+REM Ouvre des éditeurs avec citations de Shakespeare
+REM Et des proverbes français amusants
+REM Boucle avec fermeture automatique
+REM 10 itérations maximum pour éviter l'overflow
+
+REM ---- CONFIGURATION ----
+REM Éditeur : TextEdit (macOS)
+REM Nombre de citations : 10 citations différentes
+REM Durée par citation : 8 secondes
+REM Compteur : 10 itérations maximum
+REM Délai entre ouvertures : 2 secondes
+
+DELAY 1000
+
+REM ========== CITATION 1 - SHAKESPEARE ==========
+CMD SPACE
+DELAY 300
+STRING TextEdit
+ENTER
+DELAY 1000
+STRING "Être ou ne pas être, telle est la question"
+ENTER
+STRING - William Shakespeare, Hamlet
+ENTER
+STRING
+ENTER
+STRING "Ou bien : compile ou ne compile pas"
+ENTER
+STRING - Proverbe du développeur Mac
+ENTER
+STRING
+ENTER
+STRING (Citation 1/10 - Pop-Up Shakespeare macOS)
+DELAY 8000
+CMD w
+DELAY 2000
+
+REM ========== CITATION 2 - PROVERBE FRANÇAIS ==========
+CMD SPACE
+DELAY 300
+STRING TextEdit
+ENTER
+DELAY 1000
+STRING "L'habit ne fait pas le moine,"
+ENTER
+STRING "mais le MacBook fait le développeur"
+ENTER
+STRING - Proverbe informatique français
+ENTER
+STRING
+ENTER
+STRING (Citation 2/10 - Pop-Up Shakespeare macOS)
+DELAY 8000
+CMD w
+DELAY 2000
+
+REM ========== CITATION 3 - SHAKESPEARE ==========
+CMD SPACE
+DELAY 300
+STRING TextEdit
+ENTER
+DELAY 1000
+STRING "Tout est bien qui finit bien"
+ENTER
+STRING - William Shakespeare
+ENTER
+STRING
+ENTER
+STRING "Sauf quand Xcode plante"
+ENTER
+STRING - Proverbe du développeur iOS
+ENTER
+STRING
+ENTER
+STRING (Citation 3/10 - Pop-Up Shakespeare macOS)
+DELAY 8000
+CMD w
+DELAY 2000
+
+REM ========== CITATION 4 - PROVERBE TECH ==========
+CMD SPACE
+DELAY 300
+STRING TextEdit
+ENTER
+DELAY 1000
+STRING "Il n'y a que deux choses difficiles"
+ENTER
+STRING "sur macOS :"
+ENTER
+STRING "1. Gérer les permissions"
+ENTER
+STRING "2. Comprendre le Keychain"
+ENTER
+STRING "3. Expliquer pourquoi ça coûte si cher"
+ENTER
+STRING
+ENTER
+STRING (Citation 4/10 - Pop-Up Shakespeare macOS)
+DELAY 8000
+CMD w
+DELAY 2000
+
+REM ========== CITATION 5 - SHAKESPEARE ==========
+CMD SPACE
+DELAY 300
+STRING TextEdit
+ENTER
+DELAY 1000
+STRING "Le monde entier est une scène"
+ENTER
+STRING "Et nous ne sommes que des acteurs"
+ENTER
+STRING - William Shakespeare
+ENTER
+STRING
+ENTER
+STRING "Sauf sur l'App Store, où nous sommes des reviewers"
+ENTER
+STRING
+ENTER
+STRING (Citation 5/10 - Pop-Up Shakespeare macOS)
+DELAY 8000
+CMD w
+DELAY 2000
+
+REM ========== CITATION 6 - PROVERBE FRANÇAIS ==========
+CMD SPACE
+DELAY 300
+STRING TextEdit
+ENTER
+DELAY 1000
+STRING "Qui vivra verra"
+ENTER
+STRING "Qui mettra à jour Big Sur comprendra"
+ENTER
+STRING - Proverbe du développeur patient
+ENTER
+STRING
+ENTER
+STRING (Citation 6/10 - Pop-Up Shakespeare macOS)
+DELAY 8000
+CMD w
+DELAY 2000
+
+REM ========== CITATION 7 - SHAKESPEARE ==========
+CMD SPACE
+DELAY 300
+STRING TextEdit
+ENTER
+DELAY 1000
+STRING "Il vaut mieux avoir aimé et perdu"
+ENTER
+STRING "que n'avoir jamais aimé du tout"
+ENTER
+STRING - William Shakespeare
+ENTER
+STRING
+ENTER
+STRING "Sauf quand on parle de Time Machine"
+ENTER
+STRING
+ENTER
+STRING (Citation 7/10 - Pop-Up Shakespeare macOS)
+DELAY 8000
+CMD w
+DELAY 2000
+
+REM ========== CITATION 8 - PROVERBE TECH ==========
+CMD SPACE
+DELAY 300
+STRING TextEdit
+ENTER
+DELAY 1000
+STRING "Un bug dans SwiftUI"
+ENTER
+STRING "vaut mieux que deux features"
+ENTER
+STRING "qui ne compilent pas"
+ENTER
+STRING - Proverbe du développeur Swift
+ENTER
+STRING
+ENTER
+STRING (Citation 8/10 - Pop-Up Shakespeare macOS)
+DELAY 8000
+CMD w
+DELAY 2000
+
+REM ========== CITATION 9 - SHAKESPEARE ==========
+CMD SPACE
+DELAY 300
+STRING TextEdit
+ENTER
+DELAY 1000
+STRING "Brevity is the soul of wit"
+ENTER
+STRING "La concision est l'âme de l'esprit"
+ENTER
+STRING - William Shakespeare
+ENTER
+STRING
+ENTER
+STRING "Sauf dans les logs de Console.app"
+ENTER
+STRING
+ENTER
+STRING (Citation 9/10 - Pop-Up Shakespeare macOS)
+DELAY 8000
+CMD w
+DELAY 2000
+
+REM ========== CITATION 10 - FINALE ==========
+CMD SPACE
+DELAY 300
+STRING TextEdit
+ENTER
+DELAY 1000
+STRING "Ainsi se termine notre spectacle"
+ENTER
+STRING "Nos acteurs étaient des esprits"
+ENTER
+STRING "Et se sont évanouis dans les airs"
+ENTER
+STRING - William Shakespeare, La Tempête
+ENTER
+STRING
+ENTER
+STRING "Comme nos processus dans Activity Monitor"
+ENTER
+STRING
+ENTER
+STRING ========== FIN DU SPECTACLE ==========
+ENTER
+STRING Pop-Up Shakespeare macOS - Mission accomplie
+ENTER
+STRING 10 citations présentées
+ENTER
+STRING Durée totale : 100 secondes
+ENTER
+STRING Éditeur utilisé : TextEdit
+DELAY 10000
+CMD w
+
+REM ========== NETTOYAGE ==========
+REM S'assure qu'aucune fenêtre TextEdit ne reste ouverte
+CMD TAB
+DELAY 1000
+CMD w
+DELAY 1000
+CMD TAB
+DELAY 1000
+CMD w 

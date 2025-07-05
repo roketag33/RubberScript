@@ -1,0 +1,203 @@
+REM ===========================================
+REM Panneau de Contrôle Disco - Windows
+REM ===========================================
+REM Ouvre successivement différents applets système
+REM Fermeture automatique après n secondes
+REM Évite les applets nécessitant des privilèges admin
+REM Effet disco avec ouverture/fermeture rythmée
+
+REM ---- CONFIGURATION ----
+REM Nombre d'applets : 12 applets système
+REM Durée par applet : 5 secondes
+REM Durée totale : 60 secondes
+REM Pas d'UAC requis
+
+DELAY 1000
+
+REM ========== APPLET 1 - INFORMATIONS SYSTÈME ==========
+GUI r
+DELAY 300
+STRING msinfo32
+ENTER
+DELAY 5000
+ALT F4
+DELAY 1000
+
+REM ========== APPLET 2 - GESTIONNAIRE DE TÂCHES ==========
+CTRL SHIFT ESCAPE
+DELAY 5000
+ALT F4
+DELAY 1000
+
+REM ========== APPLET 3 - CALCULATRICE ==========
+GUI r
+DELAY 300
+STRING calc
+ENTER
+DELAY 5000
+ALT F4
+DELAY 1000
+
+REM ========== APPLET 4 - GESTIONNAIRE DE PÉRIPHÉRIQUES ==========
+GUI r
+DELAY 300
+STRING devmgmt.msc
+ENTER
+DELAY 5000
+ALT F4
+DELAY 1000
+
+REM ========== APPLET 5 - OBSERVATEUR D'ÉVÉNEMENTS ==========
+GUI r
+DELAY 300
+STRING eventvwr
+ENTER
+DELAY 5000
+ALT F4
+DELAY 1000
+
+REM ========== APPLET 6 - CONFIGURATION SYSTÈME ==========
+GUI r
+DELAY 300
+STRING msconfig
+ENTER
+DELAY 5000
+ALT F4
+DELAY 1000
+
+REM ========== APPLET 7 - MONITEUR DE RESSOURCES ==========
+GUI r
+DELAY 300
+STRING resmon
+ENTER
+DELAY 5000
+ALT F4
+DELAY 1000
+
+REM ========== APPLET 8 - OUTILS ADMINISTRATIFS ==========
+GUI r
+DELAY 300
+STRING control admintools
+ENTER
+DELAY 5000
+ALT F4
+DELAY 1000
+
+REM ========== APPLET 9 - PANNEAU DE CONFIGURATION ==========
+GUI r
+DELAY 300
+STRING control
+ENTER
+DELAY 5000
+ALT F4
+DELAY 1000
+
+REM ========== APPLET 10 - GESTION DES DISQUES ==========
+GUI r
+DELAY 300
+STRING diskmgmt.msc
+ENTER
+DELAY 5000
+ALT F4
+DELAY 1000
+
+REM ========== APPLET 11 - SERVICES ==========
+GUI r
+DELAY 300
+STRING services.msc
+ENTER
+DELAY 5000
+ALT F4
+DELAY 1000
+
+REM ========== APPLET 12 - ÉDITEUR DE REGISTRE ==========
+GUI r
+DELAY 300
+STRING regedit
+ENTER
+DELAY 5000
+ALT F4
+DELAY 1000
+
+REM ========== PHASE RAPIDE - EFFET DISCO ==========
+REM Ouverture rapide de plusieurs applets
+GUI r
+DELAY 200
+STRING calc
+ENTER
+DELAY 2000
+ALT F4
+DELAY 500
+
+GUI r
+DELAY 200
+STRING notepad
+ENTER
+DELAY 2000
+ALT F4
+DELAY 500
+
+GUI r
+DELAY 200
+STRING mspaint
+ENTER
+DELAY 2000
+ALT F4
+DELAY 500
+
+CTRL SHIFT ESCAPE
+DELAY 2000
+ALT F4
+DELAY 500
+
+REM ========== FINALE SPECTACULAIRE ==========
+REM Ouvre plusieurs fenêtres en même temps
+GUI r
+DELAY 200
+STRING calc
+ENTER
+DELAY 500
+
+GUI r
+DELAY 200
+STRING notepad
+ENTER
+DELAY 500
+
+GUI r
+DELAY 200
+STRING mspaint
+ENTER
+DELAY 500
+
+CTRL SHIFT ESCAPE
+DELAY 3000
+
+REM ========== NETTOYAGE FINAL ==========
+REM Ferme toutes les fenêtres ouvertes
+ALT F4
+DELAY 500
+ALT F4
+DELAY 500
+ALT F4
+DELAY 500
+ALT F4
+DELAY 500
+
+REM ========== MESSAGE DE FIN ==========
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING Panneau de Contrôle Disco - Mission accomplie
+ENTER
+STRING 12 applets système présentés
+ENTER
+STRING Durée totale : 90 secondes
+ENTER
+STRING Effet disco : Réussi
+ENTER
+STRING Aucun privilège admin requis
+DELAY 3000
+ALT F4 

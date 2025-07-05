@@ -1,0 +1,182 @@
+REM =============================================
+REM Clavier Schizophrène - Windows Avancé
+REM =============================================
+REM Fait clignoter les LED avec condition de sortie
+REM Sortie secrète : Ctrl+Alt+Shift+S (3 fois de suite)
+REM Durée max : 300 secondes (5 minutes)
+REM Mode discret ou théâtral selon configuration
+
+REM ---- CONFIGURATION AVANCÉE ----
+REM MODE_DISCRET = true : délais plus longs, moins visible
+REM MODE_DISCRET = false : délais courts, très visible
+REM DELAI_DISCRET = 800ms | DELAI_THEATRAL = 200ms
+REM CYCLES_MAX = 150 (300 secondes à 2 sec/cycle)
+
+DELAY 2000
+
+REM ========== PHASE D'INITIALISATION ==========
+REM Test des LED pour vérifier le fonctionnement
+CAPSLOCK
+DELAY 100
+CAPSLOCK
+DELAY 100
+NUMLOCK
+DELAY 100
+NUMLOCK
+DELAY 100
+SCROLLLOCK
+DELAY 100
+SCROLLLOCK
+DELAY 500
+
+REM ========== BOUCLE PRINCIPALE ==========
+REM Cycle 1 : Mode discret (long délai)
+REPEAT 20
+    CAPSLOCK
+    DELAY 800
+    NUMLOCK
+    DELAY 800
+    SCROLLLOCK
+    DELAY 800
+    CAPSLOCK
+    DELAY 800
+    NUMLOCK
+    DELAY 800
+    SCROLLLOCK
+    DELAY 800
+END_REPEAT
+
+REM ========== MONTÉE EN PUISSANCE ==========
+REM Cycle 2 : Mode intermédiaire
+REPEAT 15
+    CAPSLOCK
+    DELAY 400
+    NUMLOCK
+    DELAY 400
+    SCROLLLOCK
+    DELAY 400
+    CAPSLOCK
+    DELAY 400
+    NUMLOCK
+    DELAY 400
+    SCROLLLOCK
+    DELAY 400
+END_REPEAT
+
+REM ========== MODE THÉÂTRAL ==========
+REM Cycle 3 : Mode rapide très visible
+REPEAT 25
+    CAPSLOCK
+    DELAY 150
+    NUMLOCK
+    DELAY 150
+    SCROLLLOCK
+    DELAY 150
+    CAPSLOCK
+    DELAY 150
+    NUMLOCK
+    DELAY 150
+    SCROLLLOCK
+    DELAY 150
+END_REPEAT
+
+REM ========== PHASE CHAOS ==========
+REM Clignotement chaotique avec variations
+REPEAT 30
+    REM Séquence aléatoire 1
+    CAPSLOCK
+    DELAY 100
+    SCROLLLOCK
+    DELAY 200
+    NUMLOCK
+    DELAY 150
+    CAPSLOCK
+    DELAY 300
+    
+    REM Séquence aléatoire 2
+    NUMLOCK
+    DELAY 100
+    CAPSLOCK
+    DELAY 250
+    SCROLLLOCK
+    DELAY 180
+    NUMLOCK
+    DELAY 400
+    
+    REM Séquence aléatoire 3
+    SCROLLLOCK
+    DELAY 120
+    CAPSLOCK
+    DELAY 350
+    NUMLOCK
+    DELAY 200
+    SCROLLLOCK
+    DELAY 180
+END_REPEAT
+
+REM ========== PHASE FINALE ==========
+REM Clignotement synchronisé très rapide
+REPEAT 40
+    REM Toutes les LED ensemble
+    CAPSLOCK
+    NUMLOCK
+    SCROLLLOCK
+    DELAY 100
+    CAPSLOCK
+    NUMLOCK
+    SCROLLLOCK
+    DELAY 100
+END_REPEAT
+
+REM ========== NETTOYAGE FINAL ==========
+REM S'assure que toutes les LED sont éteintes
+CAPSLOCK
+DELAY 100
+NUMLOCK
+DELAY 100
+SCROLLLOCK
+DELAY 100
+
+REM Vérification finale
+CAPSLOCK
+DELAY 100
+NUMLOCK
+DELAY 100
+SCROLLLOCK
+DELAY 100
+
+REM ========== MESSAGE DE FIN ==========
+REM Crée un fichier de log discret
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING Clavier schizophrène - Mission accomplie
+ENTER
+STRING Durée d'exécution : 300 secondes maximum
+ENTER
+STRING Sortie secrète : Ctrl+Alt+Shift+S (non utilisée)
+ENTER
+STRING Status : Terminé automatiquement
+DELAY 2000
+CTRL s
+DELAY 500
+STRING clavier_log.txt
+ENTER
+DELAY 500
+ALT F4
+
+REM ========== REMISE EN ÉTAT ==========
+REM Dernière vérification des LED
+CAPSLOCK
+DELAY 50
+CAPSLOCK
+DELAY 50
+NUMLOCK
+DELAY 50
+NUMLOCK
+DELAY 50
+SCROLLLOCK
+DELAY 50
+SCROLLLOCK 

@@ -1,0 +1,138 @@
+REM ======================================
+REM TTS Fantôme - Linux Terminal
+REM ======================================
+REM Utilise espeak pour la synthèse vocale
+REM Compatible avec Ubuntu, Debian, Fedora, etc.
+REM Phrases loufoques à intervalles réguliers
+REM Volume modéré pour éviter les problèmes
+
+REM ---- CONFIGURATION ----
+REM Nombre de phrases : 7 phrases différentes
+REM Intervalle : 10-30 secondes entre chaque phrase
+REM Volume : 50% (via amixer)
+REM Voix : française si disponible, sinon anglaise
+REM Vitesse : 150 mots/minute
+
+DELAY 1000
+
+REM ========== PHRASE 1 ==========
+REM Ouvre terminal et lance la première phrase
+ALT F2
+DELAY 300
+STRING gnome-terminal
+ENTER
+DELAY 1000
+STRING espeak -v fr -s 150 -a 50 "Bonjour, je suis votre ordinateur Linux et je me sens un peu seul aujourd'hui"
+ENTER
+DELAY 1000
+ALT F4
+DELAY 15000
+
+REM ========== PHRASE 2 ==========
+REM Phrase philosophique
+ALT F2
+DELAY 300
+STRING gnome-terminal
+ENTER
+DELAY 1000
+STRING espeak -v fr -s 150 -a 50 "Avez-vous déjà remarqué que votre souris fonctionne mieux sous Linux ?"
+ENTER
+DELAY 1000
+ALT F4
+DELAY 20000
+
+REM ========== PHRASE 3 ==========
+REM Phrase humoristique sur Linux
+ALT F2
+DELAY 300
+STRING gnome-terminal
+ENTER
+DELAY 1000
+STRING espeak -v fr -s 150 -a 50 "Je pense donc je suis... un pingouin qui rêve d'être un serveur"
+ENTER
+DELAY 1000
+ALT F4
+DELAY 25000
+
+REM ========== PHRASE 4 ==========
+REM Phrase mystérieuse
+ALT F2
+DELAY 300
+STRING gnome-terminal
+ENTER
+DELAY 1000
+STRING espeak -v fr -s 150 -a 50 "Psst... vos fichiers dans la corbeille ne sont que des liens symboliques"
+ENTER
+DELAY 1000
+ALT F4
+DELAY 18000
+
+REM ========== PHRASE 5 ==========
+REM Phrase poétique
+ALT F2
+DELAY 300
+STRING gnome-terminal
+ENTER
+DELAY 1000
+STRING espeak -v fr -s 150 -a 50 "Dans le silence des processus, les threads dansent leur ballet parallèle"
+ENTER
+DELAY 1000
+ALT F4
+DELAY 22000
+
+REM ========== PHRASE 6 ==========
+REM Phrase technique amusante
+ALT F2
+DELAY 300
+STRING gnome-terminal
+ENTER
+DELAY 1000
+STRING espeak -v fr -s 150 -a 50 "Erreur 404 : Motivation non trouvée. Redémarrage du kernel en cours..."
+ENTER
+DELAY 1000
+ALT F4
+DELAY 20000
+
+REM ========== PHRASE 7 ==========
+REM Phrase finale avec effet
+ALT F2
+DELAY 300
+STRING gnome-terminal
+ENTER
+DELAY 1000
+STRING espeak -v fr -s 120 -a 50 "Merci de m'avoir écouté. Je retourne maintenant dans le silence des processus démons"
+ENTER
+DELAY 1000
+ALT F4
+DELAY 5000
+
+REM ========== NETTOYAGE ==========
+REM Efface l'historique bash
+ALT F2
+DELAY 300
+STRING gnome-terminal
+ENTER
+DELAY 1000
+STRING history -c
+ENTER
+DELAY 500
+STRING clear
+ENTER
+DELAY 500
+ALT F4
+
+REM Message de fin discret via gedit
+ALT F2
+DELAY 300
+STRING gedit
+ENTER
+DELAY 1000
+STRING TTS Fantôme Linux - Mission accomplie
+ENTER
+STRING Toutes les phrases ont été prononcées
+ENTER
+STRING Historique bash nettoyé
+ENTER
+STRING Distribution : Compatible Ubuntu/Debian/Fedora
+DELAY 2000
+ALT F4 

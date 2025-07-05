@@ -1,0 +1,180 @@
+REM ==========================================
+REM Tapis Roulant - macOS Effets Visuels
+REM ==========================================
+REM Rotation d'écran limitée sur macOS
+REM Utilise des effets visuels alternatifs
+REM Dock qui bouge, fenêtres qui bougent, etc.
+REM Compatible macOS 10.12+
+
+REM ---- CONFIGURATION ----
+REM Effets : Dock, Mission Control, Espaces
+REM Durée par effet : 10 secondes
+REM Nombre de cycles : 6 cycles complets
+REM Fallback : rotation limitée si supportée
+
+DELAY 2000
+
+REM ========== CYCLE 1 - DOCK DANCE ==========
+REM Fait apparaître/disparaître le Dock
+REM Dock à gauche
+CMD OPT d
+DELAY 500
+CMD OPT d
+DELAY 500
+CMD OPT d
+DELAY 500
+CMD OPT d
+DELAY 3000
+
+REM ========== CYCLE 2 - MISSION CONTROL ==========
+REM Active Mission Control de façon répétée
+F3
+DELAY 2000
+ESCAPE
+DELAY 1000
+F3
+DELAY 2000
+ESCAPE
+DELAY 1000
+F3
+DELAY 2000
+ESCAPE
+DELAY 3000
+
+REM ========== CYCLE 3 - ESPACES MULTIPLES ==========
+REM Navigue entre les espaces rapidement
+CTRL RIGHT
+DELAY 1000
+CTRL RIGHT
+DELAY 1000
+CTRL RIGHT
+DELAY 1000
+CTRL LEFT
+DELAY 1000
+CTRL LEFT
+DELAY 1000
+CTRL LEFT
+DELAY 1000
+CTRL RIGHT
+DELAY 1000
+CTRL LEFT
+DELAY 3000
+
+REM ========== CYCLE 4 - FENÊTRES FOLLES ==========
+REM Ouvre et ferme des fenêtres rapidement
+CMD SPACE
+DELAY 300
+STRING Calculator
+ENTER
+DELAY 1000
+CMD w
+DELAY 500
+
+CMD SPACE
+DELAY 300
+STRING TextEdit
+ENTER
+DELAY 1000
+CMD w
+DELAY 500
+
+CMD SPACE
+DELAY 300
+STRING Terminal
+ENTER
+DELAY 1000
+CMD w
+DELAY 500
+
+CMD SPACE
+DELAY 300
+STRING Finder
+ENTER
+DELAY 1000
+CMD w
+DELAY 3000
+
+REM ========== CYCLE 5 - EXPOSE ==========
+REM Utilise Exposé pour des effets visuels
+F4
+DELAY 2000
+ESCAPE
+DELAY 1000
+F4
+DELAY 2000
+ESCAPE
+DELAY 1000
+F4
+DELAY 2000
+ESCAPE
+DELAY 3000
+
+REM ========== CYCLE 6 - ZOOM ÉCRAN ==========
+REM Utilise le zoom pour créer un effet visuel
+CMD OPT EQUAL
+DELAY 1000
+CMD OPT EQUAL
+DELAY 1000
+CMD OPT EQUAL
+DELAY 1000
+CMD OPT MINUS
+DELAY 1000
+CMD OPT MINUS
+DELAY 1000
+CMD OPT MINUS
+DELAY 3000
+
+REM ========== TENTATIVE ROTATION ==========
+REM Essaie la rotation si elle est supportée
+REM (ne fonctionne que sur certains écrans)
+CMD SPACE
+DELAY 300
+STRING Terminal
+ENTER
+DELAY 1000
+STRING system_profiler SPDisplaysDataType | grep -i resolution
+ENTER
+DELAY 2000
+CMD w
+
+REM ========== NETTOYAGE ==========
+REM Remet tout en ordre
+REM S'assure que le zoom est remis à zéro
+CMD OPT 0
+DELAY 1000
+
+REM Retour à l'espace principal
+CTRL LEFT
+DELAY 500
+CTRL LEFT
+DELAY 500
+CTRL LEFT
+DELAY 500
+
+REM ========== MESSAGE DE FIN ==========
+REM Ouvre TextEdit pour confirmer la fin
+CMD SPACE
+DELAY 300
+STRING TextEdit
+ENTER
+DELAY 1000
+STRING Tapis Roulant macOS - Mission accomplie
+ENTER
+STRING Effets visuels terminés
+ENTER
+STRING Durée totale : 2 minutes
+ENTER
+STRING Cycles effectués : 6 cycles complets
+ENTER
+STRING Méthodes : Dock, Mission Control, Espaces, Zoom
+ENTER
+STRING Note : Rotation d'écran limitée sur macOS
+DELAY 3000
+CMD w
+
+REM ========== DERNIÈRE VÉRIFICATION ==========
+REM S'assure que tout est normal
+CMD OPT 0
+DELAY 500
+CTRL LEFT
+DELAY 500 

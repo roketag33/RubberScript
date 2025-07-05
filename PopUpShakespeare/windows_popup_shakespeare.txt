@@ -1,0 +1,247 @@
+REM ===========================================
+REM Pop-Up Shakespeare - Windows Notepad
+REM ===========================================
+REM Ouvre des éditeurs avec citations de Shakespeare
+REM Et des proverbes français amusants
+REM Boucle infinie avec fermeture automatique
+REM 10 itérations maximum pour éviter l'overflow
+
+REM ---- CONFIGURATION ----
+REM Éditeur : Notepad (Windows)
+REM Nombre de citations : 10 citations différentes
+REM Durée par citation : 8 secondes
+REM Compteur : 10 itérations maximum
+REM Délai entre ouvertures : 2 secondes
+
+DELAY 1000
+
+REM ========== CITATION 1 - SHAKESPEARE ==========
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING "Être ou ne pas être, telle est la question"
+ENTER
+STRING - William Shakespeare, Hamlet
+ENTER
+STRING
+ENTER
+STRING (Citation 1/10 - Pop-Up Shakespeare)
+DELAY 8000
+ALT F4
+DELAY 2000
+
+REM ========== CITATION 2 - PROVERBE FRANÇAIS ==========
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING "L'habit ne fait pas le moine,"
+ENTER
+STRING "mais le clavier fait le développeur"
+ENTER
+STRING - Proverbe informatique français
+ENTER
+STRING
+ENTER
+STRING (Citation 2/10 - Pop-Up Shakespeare)
+DELAY 8000
+ALT F4
+DELAY 2000
+
+REM ========== CITATION 3 - SHAKESPEARE ==========
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING "Tout est bien qui finit bien"
+ENTER
+STRING - William Shakespeare
+ENTER
+STRING
+ENTER
+STRING "Sauf quand on oublie de sauvegarder"
+ENTER
+STRING - Proverbe du développeur moderne
+ENTER
+STRING
+ENTER
+STRING (Citation 3/10 - Pop-Up Shakespeare)
+DELAY 8000
+ALT F4
+DELAY 2000
+
+REM ========== CITATION 4 - PROVERBE TECH ==========
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING "Il n'y a que deux choses difficiles"
+ENTER
+STRING "en informatique :"
+ENTER
+STRING "1. Invalider le cache"
+ENTER
+STRING "2. Nommer les choses"
+ENTER
+STRING "3. Les erreurs off-by-one"
+ENTER
+STRING
+ENTER
+STRING (Citation 4/10 - Pop-Up Shakespeare)
+DELAY 8000
+ALT F4
+DELAY 2000
+
+REM ========== CITATION 5 - SHAKESPEARE ==========
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING "Le monde entier est une scène"
+ENTER
+STRING "Et nous ne sommes que des acteurs"
+ENTER
+STRING - William Shakespeare
+ENTER
+STRING
+ENTER
+STRING "Sauf sur GitHub, où nous sommes des contributeurs"
+ENTER
+STRING
+ENTER
+STRING (Citation 5/10 - Pop-Up Shakespeare)
+DELAY 8000
+ALT F4
+DELAY 2000
+
+REM ========== CITATION 6 - PROVERBE FRANÇAIS ==========
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING "Qui vivra verra"
+ENTER
+STRING "Qui debuggera comprendra"
+ENTER
+STRING - Proverbe du développeur patient
+ENTER
+STRING
+ENTER
+STRING (Citation 6/10 - Pop-Up Shakespeare)
+DELAY 8000
+ALT F4
+DELAY 2000
+
+REM ========== CITATION 7 - SHAKESPEARE ==========
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING "Il vaut mieux avoir aimé et perdu"
+ENTER
+STRING "que n'avoir jamais aimé du tout"
+ENTER
+STRING - William Shakespeare
+ENTER
+STRING
+ENTER
+STRING "Sauf quand on parle de ses données"
+ENTER
+STRING
+ENTER
+STRING (Citation 7/10 - Pop-Up Shakespeare)
+DELAY 8000
+ALT F4
+DELAY 2000
+
+REM ========== CITATION 8 - PROVERBE TECH ==========
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING "Un bug dans le code"
+ENTER
+STRING "vaut mieux que deux features"
+ENTER
+STRING "qui ne marchent pas"
+ENTER
+STRING - Proverbe du développeur réaliste
+ENTER
+STRING
+ENTER
+STRING (Citation 8/10 - Pop-Up Shakespeare)
+DELAY 8000
+ALT F4
+DELAY 2000
+
+REM ========== CITATION 9 - SHAKESPEARE ==========
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING "Brevity is the soul of wit"
+ENTER
+STRING "La concision est l'âme de l'esprit"
+ENTER
+STRING - William Shakespeare
+ENTER
+STRING
+ENTER
+STRING "Sauf dans les commentaires de code"
+ENTER
+STRING
+ENTER
+STRING (Citation 9/10 - Pop-Up Shakespeare)
+DELAY 8000
+ALT F4
+DELAY 2000
+
+REM ========== CITATION 10 - FINALE ==========
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING "Ainsi se termine notre spectacle"
+ENTER
+STRING "Nos acteurs étaient des esprits"
+ENTER
+STRING "Et se sont évanouis dans les airs"
+ENTER
+STRING - William Shakespeare, La Tempête
+ENTER
+STRING
+ENTER
+STRING "Comme nos processus en arrière-plan"
+ENTER
+STRING
+ENTER
+STRING ========== FIN DU SPECTACLE ==========
+ENTER
+STRING Pop-Up Shakespeare - Mission accomplie
+ENTER
+STRING 10 citations présentées
+ENTER
+STRING Durée totale : 100 secondes
+DELAY 10000
+ALT F4
+
+REM ========== NETTOYAGE ==========
+REM S'assure qu'aucune fenêtre Notepad ne reste ouverte
+ALT TAB
+DELAY 1000
+ALT F4
+DELAY 1000
+ALT TAB
+DELAY 1000
+ALT F4 

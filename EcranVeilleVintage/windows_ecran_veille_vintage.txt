@@ -1,0 +1,173 @@
+REM ===========================================
+REM Écran de Veille Vintage - Windows
+REM ===========================================
+REM Active des screensavers vintage Windows
+REM Utilise les .scr natifs du système
+REM Nettoie automatiquement les traces
+REM Compatible Windows 10/11
+
+REM ---- CONFIGURATION ----
+REM Screensavers : Intégrés Windows
+REM Durée : 30 secondes par screensaver
+REM Nombre : 5 screensavers différents
+REM Sortie : Mouvement de souris automatique
+
+DELAY 1000
+
+REM ========== SCREENSAVER 1 - BULLES ==========
+REM Active l'écran de veille Bulles
+GUI r
+DELAY 300
+STRING C:\Windows\System32\Bubbles.scr /s
+ENTER
+DELAY 30000
+REM Sortie par mouvement de souris
+MOUSEMOVE 100 100
+DELAY 1000
+
+REM ========== SCREENSAVER 2 - MYSTIFY ==========
+REM Active l'écran de veille Mystify
+GUI r
+DELAY 300
+STRING C:\Windows\System32\Mystify.scr /s
+ENTER
+DELAY 30000
+REM Sortie par mouvement de souris
+MOUSEMOVE 200 200
+DELAY 1000
+
+REM ========== SCREENSAVER 3 - RIBBONS ==========
+REM Active l'écran de veille Ribbons
+GUI r
+DELAY 300
+STRING C:\Windows\System32\Ribbons.scr /s
+ENTER
+DELAY 30000
+REM Sortie par mouvement de souris
+MOUSEMOVE 300 300
+DELAY 1000
+
+REM ========== SCREENSAVER 4 - BLANK ==========
+REM Active l'écran de veille Blank (écran noir)
+GUI r
+DELAY 300
+STRING C:\Windows\System32\scrnsave.scr /s
+ENTER
+DELAY 15000
+REM Sortie par mouvement de souris
+MOUSEMOVE 400 400
+DELAY 1000
+
+REM ========== SCREENSAVER 5 - PHOTOS ==========
+REM Active l'écran de veille Photos
+GUI r
+DELAY 300
+STRING C:\Windows\System32\PhotoScreensaver.scr /s
+ENTER
+DELAY 30000
+REM Sortie par mouvement de souris
+MOUSEMOVE 500 500
+DELAY 1000
+
+REM ========== PHASE RAPIDE ==========
+REM Activation rapide de plusieurs screensavers
+REM Durée réduite pour effet spectaculaire
+
+REM Bulles rapide
+GUI r
+DELAY 200
+STRING C:\Windows\System32\Bubbles.scr /s
+ENTER
+DELAY 10000
+MOUSEMOVE 100 100
+DELAY 500
+
+REM Mystify rapide
+GUI r
+DELAY 200
+STRING C:\Windows\System32\Mystify.scr /s
+ENTER
+DELAY 10000
+MOUSEMOVE 200 200
+DELAY 500
+
+REM Ribbons rapide
+GUI r
+DELAY 200
+STRING C:\Windows\System32\Ribbons.scr /s
+ENTER
+DELAY 10000
+MOUSEMOVE 300 300
+DELAY 500
+
+REM ========== CONFIGURATION SCREENSAVER ==========
+REM Ouvre les paramètres d'écran de veille
+GUI r
+DELAY 300
+STRING control desk.cpl,,1
+ENTER
+DELAY 5000
+REM Ferme les paramètres
+ALT F4
+DELAY 1000
+
+REM ========== NETTOYAGE ==========
+REM Efface les traces dans l'historique Exécuter
+GUI r
+DELAY 300
+STRING regedit
+ENTER
+DELAY 2000
+REM Ferme regedit sans modification
+ALT F4
+DELAY 1000
+
+REM ========== RESTAURATION ==========
+REM Remet l'écran de veille par défaut
+GUI r
+DELAY 300
+STRING control desk.cpl,,1
+ENTER
+DELAY 3000
+REM Sélectionne "Aucun"
+TAB
+TAB
+TAB
+DOWN
+UP
+ENTER
+DELAY 1000
+REM Applique et ferme
+TAB
+TAB
+TAB
+TAB
+ENTER
+DELAY 1000
+
+REM ========== MESSAGE DE FIN ==========
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING Écran de Veille Vintage - Mission accomplie
+ENTER
+STRING 5 screensavers vintage présentés
+ENTER
+STRING Durée totale : 3 minutes
+ENTER
+STRING Screensavers : Bulles, Mystify, Ribbons, Blank, Photos
+ENTER
+STRING Configuration restaurée à "Aucun"
+ENTER
+STRING Compatibilité : Windows 10/11
+DELAY 3000
+ALT F4
+
+REM ========== VÉRIFICATION FINALE ==========
+REM S'assure qu'aucun screensaver n'est actif
+MOUSEMOVE 50 50
+DELAY 500
+MOUSEMOVE 100 100
+DELAY 500 

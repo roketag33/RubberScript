@@ -1,0 +1,135 @@
+REM ======================================
+REM TTS Fantôme - macOS Terminal
+REM ======================================
+REM Utilise la commande 'say' native de macOS
+REM Phrases loufoques à intervalles réguliers
+REM Volume modéré pour éviter les problèmes
+REM Voix française si disponible
+
+REM ---- CONFIGURATION ----
+REM Nombre de phrases : 7 phrases différentes
+REM Intervalle : 10-30 secondes entre chaque phrase
+REM Volume : 0.5 (50% du volume maximum)
+REM Voix : Thomas (française) ou Alex (anglaise)
+
+DELAY 1000
+
+REM ========== PHRASE 1 ==========
+REM Ouvre Terminal et lance la première phrase
+CMD SPACE
+DELAY 300
+STRING Terminal
+ENTER
+DELAY 1000
+STRING say -v Thomas -r 200 "Bonjour, je suis votre Mac et je me sens un peu seul aujourd'hui"
+ENTER
+DELAY 1000
+CMD w
+DELAY 15000
+
+REM ========== PHRASE 2 ==========
+REM Phrase philosophique
+CMD SPACE
+DELAY 300
+STRING Terminal
+ENTER
+DELAY 1000
+STRING say -v Thomas -r 200 "Avez-vous déjà remarqué que votre trackpad glisse mieux quand vous êtes zen ?"
+ENTER
+DELAY 1000
+CMD w
+DELAY 20000
+
+REM ========== PHRASE 3 ==========
+REM Phrase humoristique sur Mac
+CMD SPACE
+DELAY 300
+STRING Terminal
+ENTER
+DELAY 1000
+STRING say -v Thomas -r 200 "Je pense donc je suis... un Mac qui rêve d'être un iPhone"
+ENTER
+DELAY 1000
+CMD w
+DELAY 25000
+
+REM ========== PHRASE 4 ==========
+REM Phrase mystérieuse
+CMD SPACE
+DELAY 300
+STRING Terminal
+ENTER
+DELAY 1000
+STRING say -v Thomas -r 200 "Psst... vos photos dans la corbeille ne sont pas vraiment supprimées"
+ENTER
+DELAY 1000
+CMD w
+DELAY 18000
+
+REM ========== PHRASE 5 ==========
+REM Phrase poétique
+CMD SPACE
+DELAY 300
+STRING Terminal
+ENTER
+DELAY 1000
+STRING say -v Thomas -r 200 "Dans le silence des ventilateurs, les bits dansent leur ballet quantique"
+ENTER
+DELAY 1000
+CMD w
+DELAY 22000
+
+REM ========== PHRASE 6 ==========
+REM Phrase technique amusante
+CMD SPACE
+DELAY 300
+STRING Terminal
+ENTER
+DELAY 1000
+STRING say -v Thomas -r 200 "Erreur 404 : Café non trouvé. Redémarrage du développeur en cours..."
+ENTER
+DELAY 1000
+CMD w
+DELAY 20000
+
+REM ========== PHRASE 7 ==========
+REM Phrase finale avec effet
+CMD SPACE
+DELAY 300
+STRING Terminal
+ENTER
+DELAY 1000
+STRING say -v Thomas -r 150 "Merci de m'avoir écouté. Je retourne maintenant dans le silence des circuits intégrés"
+ENTER
+DELAY 1000
+CMD w
+DELAY 5000
+
+REM ========== NETTOYAGE ==========
+REM Efface l'historique Terminal
+CMD SPACE
+DELAY 300
+STRING Terminal
+ENTER
+DELAY 1000
+STRING history -c
+ENTER
+DELAY 500
+STRING clear
+ENTER
+DELAY 500
+CMD w
+
+REM Message de fin discret via TextEdit
+CMD SPACE
+DELAY 300
+STRING TextEdit
+ENTER
+DELAY 1000
+STRING TTS Fantôme macOS - Mission accomplie
+ENTER
+STRING Toutes les phrases ont été prononcées
+ENTER
+STRING Historique Terminal nettoyé
+DELAY 2000
+CMD w 

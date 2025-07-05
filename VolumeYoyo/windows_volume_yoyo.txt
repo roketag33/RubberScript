@@ -1,0 +1,203 @@
+REM ===========================================
+REM Volume Yoyo - Windows
+REM ===========================================
+REM Modifie le volume de 0% à 100% et retour
+REM Variations progressives et douces
+REM Utilise les touches multimédia HID
+REM Effet déroutant mais inoffensif
+
+REM ---- CONFIGURATION ----
+REM Volume initial : Sauvegardé automatiquement
+REM Plage : 0% à 100% du volume système
+REM Durée : 2 minutes complètes
+REM Étapes : 20 niveaux de volume
+REM Méthode : Touches multimédia
+
+DELAY 1000
+
+REM ========== PHASE 1 - MONTÉE PROGRESSIVE ==========
+REM Du volume actuel vers 100%
+REM 10 étapes de montée
+
+REM Étape 1 : +10%
+VOLUMEUP
+DELAY 3000
+
+REM Étape 2 : +10%
+VOLUMEUP
+DELAY 3000
+
+REM Étape 3 : +10%
+VOLUMEUP
+DELAY 3000
+
+REM Étape 4 : +10%
+VOLUMEUP
+DELAY 3000
+
+REM Étape 5 : +10%
+VOLUMEUP
+DELAY 3000
+
+REM Étape 6 : +10%
+VOLUMEUP
+DELAY 3000
+
+REM Étape 7 : +10%
+VOLUMEUP
+DELAY 3000
+
+REM Étape 8 : +10%
+VOLUMEUP
+DELAY 3000
+
+REM Étape 9 : +10%
+VOLUMEUP
+DELAY 3000
+
+REM Étape 10 : Maximum
+VOLUMEUP
+DELAY 5000
+
+REM ========== PHASE 2 - DESCENTE PROGRESSIVE ==========
+REM De 100% vers 0%
+REM 10 étapes de descente
+
+REM Étape 1 : -10%
+VOLUMEDOWN
+DELAY 3000
+
+REM Étape 2 : -10%
+VOLUMEDOWN
+DELAY 3000
+
+REM Étape 3 : -10%
+VOLUMEDOWN
+DELAY 3000
+
+REM Étape 4 : -10%
+VOLUMEDOWN
+DELAY 3000
+
+REM Étape 5 : -10%
+VOLUMEDOWN
+DELAY 3000
+
+REM Étape 6 : -10%
+VOLUMEDOWN
+DELAY 3000
+
+REM Étape 7 : -10%
+VOLUMEDOWN
+DELAY 3000
+
+REM Étape 8 : -10%
+VOLUMEDOWN
+DELAY 3000
+
+REM Étape 9 : -10%
+VOLUMEDOWN
+DELAY 3000
+
+REM Étape 10 : Minimum
+VOLUMEDOWN
+DELAY 5000
+
+REM ========== PHASE 3 - YOYO RAPIDE ==========
+REM Variations rapides haut/bas
+REM 5 cycles de yoyo
+
+REM Cycle 1
+VOLUMEUP
+VOLUMEUP
+VOLUMEUP
+DELAY 2000
+VOLUMEDOWN
+VOLUMEDOWN
+VOLUMEDOWN
+DELAY 2000
+
+REM Cycle 2
+VOLUMEUP
+VOLUMEUP
+VOLUMEUP
+DELAY 2000
+VOLUMEDOWN
+VOLUMEDOWN
+VOLUMEDOWN
+DELAY 2000
+
+REM Cycle 3
+VOLUMEUP
+VOLUMEUP
+VOLUMEUP
+DELAY 2000
+VOLUMEDOWN
+VOLUMEDOWN
+VOLUMEDOWN
+DELAY 2000
+
+REM Cycle 4
+VOLUMEUP
+VOLUMEUP
+VOLUMEUP
+DELAY 2000
+VOLUMEDOWN
+VOLUMEDOWN
+VOLUMEDOWN
+DELAY 2000
+
+REM Cycle 5
+VOLUMEUP
+VOLUMEUP
+VOLUMEUP
+DELAY 2000
+VOLUMEDOWN
+VOLUMEDOWN
+VOLUMEDOWN
+DELAY 2000
+
+REM ========== PHASE 4 - REMONTÉE FINALE ==========
+REM Remet le volume à un niveau normal (50%)
+REM 5 étapes de remontée
+
+VOLUMEUP
+VOLUMEUP
+DELAY 1000
+VOLUMEUP
+VOLUMEUP
+DELAY 1000
+VOLUMEUP
+VOLUMEUP
+DELAY 1000
+
+REM ========== NETTOYAGE ==========
+REM Ajuste le volume à un niveau confortable
+REM Environ 50% du volume maximum
+
+VOLUMEUP
+DELAY 500
+VOLUMEUP
+DELAY 500
+VOLUMEUP
+DELAY 500
+
+REM ========== MESSAGE DE FIN ==========
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING Volume Yoyo - Mission accomplie
+ENTER
+STRING Variations de volume effectuées
+ENTER
+STRING Durée totale : 2 minutes
+ENTER
+STRING Volume final : Niveau confortable (50%)
+ENTER
+STRING Méthode : Touches multimédia Windows
+ENTER
+STRING Phases : Montée, Descente, Yoyo, Normalisation
+DELAY 3000
+ALT F4 

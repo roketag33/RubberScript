@@ -1,0 +1,162 @@
+REM ===========================================
+REM Navigateur Fugitif - Windows
+REM ===========================================
+REM Ouvre des URLs innocentes dans le navigateur
+REM Ferme l'onglet précédent automatiquement
+REM Sites HTTPS sécurisés uniquement
+REM White-list d'URLs validées
+
+REM ---- CONFIGURATION ----
+REM Nombre d'URLs : 8 sites différents
+REM Durée par site : 8 secondes
+REM Durée totale : 64 secondes
+REM Navigateur : Par défaut du système
+
+DELAY 1000
+
+REM ========== SITE 1 - CHATONS ==========
+GUI r
+DELAY 300
+STRING https://www.flickr.com/photos/tags/kitten/
+ENTER
+DELAY 8000
+CTRL w
+DELAY 2000
+
+REM ========== SITE 2 - MUSIQUE 8-BIT ==========
+GUI r
+DELAY 300
+STRING https://www.youtube.com/watch?v=Q7dZSX5CzOE
+ENTER
+DELAY 8000
+CTRL w
+DELAY 2000
+
+REM ========== SITE 3 - NATURE RELAXANTE ==========
+GUI r
+DELAY 300
+STRING https://www.unsplash.com/s/photos/nature
+ENTER
+DELAY 8000
+CTRL w
+DELAY 2000
+
+REM ========== SITE 4 - WIKIPEDIA RANDOM ==========
+GUI r
+DELAY 300
+STRING https://fr.wikipedia.org/wiki/Spécial:Page_au_hasard
+ENTER
+DELAY 8000
+CTRL w
+DELAY 2000
+
+REM ========== SITE 5 - ASMR RAIN ==========
+GUI r
+DELAY 300
+STRING https://www.youtube.com/watch?v=mPZkdNFkNps
+ENTER
+DELAY 8000
+CTRL w
+DELAY 2000
+
+REM ========== SITE 6 - ART GALLERY ==========
+GUI r
+DELAY 300
+STRING https://www.google.com/culturalinstitute/beta/
+ENTER
+DELAY 8000
+CTRL w
+DELAY 2000
+
+REM ========== SITE 7 - SPACE LIVE ==========
+GUI r
+DELAY 300
+STRING https://www.nasa.gov/live/
+ENTER
+DELAY 8000
+CTRL w
+DELAY 2000
+
+REM ========== SITE 8 - MEDITATION ==========
+GUI r
+DELAY 300
+STRING https://www.youtube.com/watch?v=1ZYbU82GVz4
+ENTER
+DELAY 8000
+CTRL w
+DELAY 2000
+
+REM ========== PHASE RAPIDE ==========
+REM Ouverture rapide de plusieurs sites
+GUI r
+DELAY 200
+STRING https://www.unsplash.com/
+ENTER
+DELAY 3000
+CTRL w
+DELAY 500
+
+GUI r
+DELAY 200
+STRING https://fr.wikipedia.org/wiki/Chat
+ENTER
+DELAY 3000
+CTRL w
+DELAY 500
+
+GUI r
+DELAY 200
+STRING https://www.youtube.com/watch?v=hFZFjoX2cGg
+ENTER
+DELAY 3000
+CTRL w
+DELAY 500
+
+REM ========== FINALE MULTI-ONGLETS ==========
+REM Ouvre plusieurs onglets puis les ferme
+GUI r
+DELAY 200
+STRING https://www.flickr.com/photos/tags/sunset/
+ENTER
+DELAY 2000
+
+CTRL t
+DELAY 500
+STRING https://www.unsplash.com/s/photos/ocean
+ENTER
+DELAY 2000
+
+CTRL t
+DELAY 500
+STRING https://fr.wikipedia.org/wiki/Informatique
+ENTER
+DELAY 2000
+
+REM ========== NETTOYAGE ==========
+REM Ferme tous les onglets ouverts
+CTRL w
+DELAY 500
+CTRL w
+DELAY 500
+CTRL w
+DELAY 500
+
+REM ========== MESSAGE DE FIN ==========
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 1000
+STRING Navigateur Fugitif - Mission accomplie
+ENTER
+STRING 8 sites innocents visités
+ENTER
+STRING Durée totale : 80 secondes
+ENTER
+STRING Tous les onglets fermés automatiquement
+ENTER
+STRING Sites HTTPS sécurisés uniquement
+ENTER
+STRING White-list : Flickr, YouTube, Unsplash, Wikipedia, NASA
+DELAY 3000
+ALT F4 

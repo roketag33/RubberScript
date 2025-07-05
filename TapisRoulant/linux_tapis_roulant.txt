@@ -1,0 +1,162 @@
+REM ==========================================
+REM Tapis Roulant - Linux Rotation Écran
+REM ==========================================
+REM Fait tourner l'écran avec xrandr
+REM Orientations : normal, left, inverted, right
+REM Compatible avec X11 (pas Wayland)
+REM Failsafe : retour automatique à normal
+
+REM ---- CONFIGURATION ----
+REM Rotations : normal -> left -> inverted -> right -> normal
+REM Durée par rotation : 15 secondes
+REM Nombre de cycles : 4 cycles complets
+REM Commande : xrandr -o [orientation]
+
+DELAY 2000
+
+REM ========== DÉTECTION ÉCRAN ==========
+REM Ouvre terminal pour détecter l'écran principal
+ALT F2
+DELAY 300
+STRING gnome-terminal
+ENTER
+DELAY 1000
+
+REM ========== CYCLE 1 - LENT ==========
+REM Rotation à gauche (90°)
+STRING xrandr -o left
+ENTER
+DELAY 15000
+
+REM Rotation inversée (180°)
+STRING xrandr -o inverted
+ENTER
+DELAY 15000
+
+REM Rotation à droite (270°)
+STRING xrandr -o right
+ENTER
+DELAY 15000
+
+REM Retour normal (0°)
+STRING xrandr -o normal
+ENTER
+DELAY 15000
+
+REM ========== CYCLE 2 - RAPIDE ==========
+REM Rotation à gauche
+STRING xrandr -o left
+ENTER
+DELAY 8000
+
+REM Rotation inversée
+STRING xrandr -o inverted
+ENTER
+DELAY 8000
+
+REM Rotation à droite
+STRING xrandr -o right
+ENTER
+DELAY 8000
+
+REM Retour normal
+STRING xrandr -o normal
+ENTER
+DELAY 8000
+
+REM ========== CYCLE 3 - TRÈS RAPIDE ==========
+REM Rotation à gauche
+STRING xrandr -o left
+ENTER
+DELAY 4000
+
+REM Rotation inversée
+STRING xrandr -o inverted
+ENTER
+DELAY 4000
+
+REM Rotation à droite
+STRING xrandr -o right
+ENTER
+DELAY 4000
+
+REM Retour normal
+STRING xrandr -o normal
+ENTER
+DELAY 4000
+
+REM ========== CYCLE 4 - ULTRA RAPIDE ==========
+REM Rotation à gauche
+STRING xrandr -o left
+ENTER
+DELAY 2000
+
+REM Rotation inversée
+STRING xrandr -o inverted
+ENTER
+DELAY 2000
+
+REM Rotation à droite
+STRING xrandr -o right
+ENTER
+DELAY 2000
+
+REM Retour normal
+STRING xrandr -o normal
+ENTER
+DELAY 2000
+
+REM ========== SÉCURITÉ FINALE ==========
+REM S'assure que l'écran est bien remis à normal
+STRING xrandr -o normal
+ENTER
+DELAY 1000
+STRING xrandr -o normal
+ENTER
+DELAY 1000
+STRING xrandr -o normal
+ENTER
+DELAY 2000
+
+REM ========== NETTOYAGE ==========
+REM Efface l'historique et ferme le terminal
+STRING history -c
+ENTER
+DELAY 500
+STRING clear
+ENTER
+DELAY 500
+STRING exit
+ENTER
+DELAY 1000
+
+REM ========== MESSAGE DE FIN ==========
+REM Ouvre gedit pour confirmer la fin
+ALT F2
+DELAY 300
+STRING gedit
+ENTER
+DELAY 1000
+STRING Tapis Roulant Linux - Mission accomplie
+ENTER
+STRING Écran remis en position normale
+ENTER
+STRING Durée totale : 2 minutes
+ENTER
+STRING Cycles effectués : 4 cycles complets
+ENTER
+STRING Méthode : xrandr -o [orientation]
+ENTER
+STRING Failsafe utilisé : xrandr -o normal (multiple)
+DELAY 3000
+ALT F4
+
+REM ========== DERNIÈRE VÉRIFICATION ==========
+REM Ultime vérification via terminal
+ALT F2
+DELAY 300
+STRING gnome-terminal
+ENTER
+DELAY 1000
+STRING xrandr -o normal && exit
+ENTER 
